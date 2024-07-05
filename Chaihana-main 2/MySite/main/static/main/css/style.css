@@ -1,0 +1,364 @@
+
+body {
+  background: linear-gradient(45deg, #FC466B, #3F5EFB);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+.tablestyle{
+    background-color: #00ff2a42;
+    block-size: 70px;
+    inline-size: 160px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+}
+.tablestyle:focus{
+    background-color: rgb(79, 169, 92);
+}
+.tablestyle:hover{
+    transition-duration: 500ms;
+    background-color:rgb(79, 169, 92);
+}
+.table1{
+    margin-top: 100px;
+    width: 60px;
+    margin-left: 9%;
+    background-color: #ffffff00;
+}
+td{
+    background-color: #ffffff00 !important;
+}
+.formMy{
+    margin:30px;
+    font-size: 20px;
+    
+}
+.cardMy{
+    margin-top: 0px;
+    width: 300px;
+    float: right;
+    margin-right:20px;
+}
+.formLabel{
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.bg-dark{
+    background-color: rgb(23, 24, 56) !important;
+}
+.navbar-toggler{
+    color: rgb(255, 255, 255) !important;
+    border: var(--bs-border-width) solid #e500ff !important;
+}
+.btn-primary{
+    --bs-btn-color: #fff !important;
+    --bs-btn-bg: #3a69af00 !important;
+    --bs-btn-border-color: #e500ff !important;
+    --bs-btn-hover-color: #fff !important;
+    --bs-btn-hover-bg: #e500ff !important;
+    --bs-btn-hover-border-color: #57067a !important;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253 !important;
+    --bs-btn-active-color: #fff !important;
+    --bs-btn-active-bg: #57067a !important;
+    --bs-btn-active-border-color: #00183a !important;
+}
+.navbar-toggler:focus{
+    box-shadow: 0 0 1px 2px #e500ff;
+}
+.container {
+  width: 460px;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  top: 6%;
+  left: 69.6%;
+  float: right;
+}
+  
+form{
+    height:auto !important;
+    float: right;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 3em;
+    margin-right: 0;
+    margin-left: auto;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.expBtn{
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    
+    &[type="submit"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  
+  
+
+.drop {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  
+.selectBtn{
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #272727;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+}
+
+.selectOption select option{
+    position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+
+.greenBtn{
+    background-color: rgb(2 208 23 / 52%);
+    width: 200px;
+    padding: 1em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(47, 255, 75, 0.333);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  .redBtn{
+    background-color: rgba(208, 2, 2, 0.52);
+    width: 200px;
+    padding: 1em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255, 0, 0, 0.333);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+  .containerForm {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  }
+  .tablestyleRed{
+    background-color: #ff000042;
+    block-size: 70px;
+    inline-size: 160px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+}
+.tablestyleRed:focus{
+    background-color: rgb(169, 79, 79);
+}
+.tablestyleRed:hover{
+    transition-duration: 500ms;
+    background-color:rgb(169, 79, 79);
+}
+.cool{
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.7;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+.form-check{
+  display: inline-table;
+  padding-right: 10px;
+}
+
+.table-order{
+  margin-left: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.td-order{
+  padding-right: 10px;
+  padding-left: 20px;
+  font-size: 15;
+}
+.td-header{
+  padding-right: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 17px;
+  font-weight: 500;
+}

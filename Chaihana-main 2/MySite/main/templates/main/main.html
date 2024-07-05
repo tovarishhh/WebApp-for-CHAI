@@ -1,0 +1,88 @@
+{% extends 'main/site.html' %}
+{% load static %}
+{% block link %}
+<link href="{% static 'main/css/style.css' %}" rel="stylesheet">
+<script src="{% static 'main/js/scripts.js' %}"></script>
+{% endblock %}
+{% block content %}
+<aside>
+    <div class="container">
+        <form>
+          <p id="panel" style="font-size: 25px; margin-bottom: 40px;">Выберите стол</p>
+            <!--Изменение  -->
+          <table class="table-order" id="order-list"> 
+          </table>  
+            <!-------------------->
+          <div class="selectOption">
+            <select class="selectBtn" id="dish-select" aria-label="Default select example">
+                <option selected>Выбрать блюдо</option>
+                {% if menu %}
+                    {% for el in menu %}
+                    <option>{{el.name}}</option>
+                    {% endfor %}
+                {% else %}
+                    <option>Добавьте блюда</option>
+                {% endif %}
+            </select><br>
+          </div>
+          <button onclick="addOrder()" class="greenBtn" type="button" id="add-dish-btn">Добавить</button>
+          <button onclick="clearOrders()" class="redBtn" type="button" id="clear-list-btn">Очистить</button><br>
+          <div style="margin-top: 20px;  text-align:left!important;" class="form-check">
+            <input style="background-color: rgb(134, 255, 134);" onclick="MakeGreen()" class="form-check-input" name="flexRadioDefault" type="radio" id="flexRadioDefault1">
+            <label  class="form-check-label" for="flexRadioDefault1">
+              Свободно
+            </label>
+          </div>
+          <div style="margin-top: 50px; text-align:left!important;" class="form-check">
+            <input style="background-color: rgb(255, 79, 79); " onclick="MakeRed()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label  class="form-check-label" for="flexRadioDefault2">
+              Занято
+            </label>
+          </div>
+        </form>  
+    </div>
+</aside>
+<main>
+    <div>
+        <nav class="navbar bg-dark fixed-top">
+            <div class="container-fluid">
+                <button class="btn btn-primary">Печать</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    Меню
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/admin">Администрирование</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/kitchen">Кухня</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/logout">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="table-container">
+            <table id="table" class="table table-borderless table1">
+                <tbody id="tbody">
+                    <tr id="row-0">
+                        <td id="plus-cell">
+                            <button onclick="addTable()" class="tablestyle fa-solid fa-plus"></button>
+                        </td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}

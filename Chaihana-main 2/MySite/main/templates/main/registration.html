@@ -1,0 +1,23 @@
+{% extends 'main/site.html' %}
+{% load static %}
+{% block link %}
+<link href="{% static 'main/css/login.css' %}" rel="stylesheet">
+<script src="{% static 'main/js/scripts.js' %}"></script>
+{% endblock %}
+{% block content %}
+<main>
+    <div class="containerForm">
+        <form method="post">
+            {% csrf_token %}
+            <p>Регистрация</p>
+            Логин <br>
+            {{ form.username }}  <br>
+            Пароль  <br>
+            {{ form.password }} <br>
+            <span>{{error}}</span>
+            <input style="margin-top: 10px;" type="submit" value="Подтвердить"><br>
+            <a href="/login">Войти</a>
+        </form>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'main/site.html' %}
+{% load static %}
+{% block link %}
+<link href="{% static 'main/css/style.css' %}" rel="stylesheet">
+<script src="{% static 'main/js/kitchen.js' %}"></script>
+{% endblock %}
+{% block content %}
+<aside>
+    <div class="container">
+        <form>
+          <p id="panel" style="font-size: 25px; margin-bottom: 40px;">Выберите стол</p>
+            <!--Изменение  -->
+          <table class="table-order" id="order-list"> 
+          </table>  
+            <!-------------------->
+          <button onclick="MakeGreen()" class="greenBtn" type="button" id="add-dish-btn">Готов</button>
+          <button onclick="MakeRed()" class="redBtn" type="button" id="clear-list-btn">Не готов</button><br>
+        </form>  
+    </div>
+</aside>
+<main>
+    <div>
+        <nav class="navbar bg-dark fixed-top">
+            <div class="container-fluid">
+                <button style="margin-right: 0; margin-left: auto;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    Меню
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/admin">Администрирование</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/">Зал</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/logout">Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="table-container">
+            <table id="table" class="table table-borderless table1">
+                <tbody id="tbody">
+                    <tr id="row-0">
+                        
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}
